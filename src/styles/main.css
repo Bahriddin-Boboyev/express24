@@ -1,0 +1,27 @@
+@layer base {
+  .icon {
+    fill: #aeaeb2;
+  }
+
+  .input:focus ~ .clear-icon,
+  .input:not(:placeholder-shown) ~ .clear-icon {
+    @apply cursor-pointer opacity-100;
+    pointer-events: auto;
+  }
+
+  .dropdown-anime {
+    transition: all 0.12s ease-in-out;
+  }
+  .primary-hover:hover {
+    background-color: #e5e5ea;
+  }
+}
+
+.btn-primary {
+  background-color: #ffec00;
+  transition: background 0.16s ease-in-out, color 0.16s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #eed600;
+}
