@@ -15,6 +15,47 @@
   .primary-hover:hover {
     background-color: #e5e5ea;
   }
+
+  .header-select {
+    transition: background-color 0.16s ease-in-out;
+    transform: translateY(0);
+  }
+  .header-select-bottom {
+    border-bottom: 1px solid #ebeae8;
+  }
+
+  .header-grid {
+    @apply grid gap-4;
+    grid-template-areas: 'label padding check-mark';
+    grid-template-columns: minmax(80px, 1fr) 16px 20px;
+  }
+
+  .grid-area-label {
+    grid-area: label;
+  }
+  .grid-area-check-mark {
+    grid-area: check-mark;
+  }
+  .grid-area-check-mark.active {
+    display: block;
+  }
+
+  .overlay {
+    opacity: 0;
+    transition: opacity 0.16s linear;
+    will-change: opacity;
+  }
+
+  .overlay.active {
+    opacity: 1;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .btn-primary {

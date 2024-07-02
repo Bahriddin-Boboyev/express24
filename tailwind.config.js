@@ -21,6 +21,9 @@ export default {
       padding: {
         base: '14px 16px',
       },
+      boxShadow: {
+        headerSelect: '0 5px 25px rgba(14, 14, 14, .1)',
+      },
     },
   },
   plugins: [],
