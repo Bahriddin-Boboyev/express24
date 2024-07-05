@@ -1,3 +1,9 @@
+import { MainCarousel } from '@/components/carousel';
+
 export const Main = () => {
-  return <div>Main</div>;
+  return (
+    <main className="container mx-auto">
+      <MainCarousel />
+    </main>
+  );
 };

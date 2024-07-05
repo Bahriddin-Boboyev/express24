@@ -56,6 +56,37 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
   }
+  .carousel-scroll {
+    flex: 0 0 auto;
+    width: calc(17% - 11.6px);
+    scroll-snap-align: end;
+    scroll-snap-stop: always;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-scroll-snap {
+    scroll-snap-type: x mandatory;
+  }
+
+  .carousel-scroll:not(:first-child) {
+    margin-left: 11.6px;
+  }
+
+  main {
+    padding: 40px 0px 120px 0px;
+  }
+}
+
+.carousel-scroll-item {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  cursor: pointer;
+}
+
+.carousel-scroll.active {
+  transform: translateX(calc(-25% * var(--index)));
 }
 
 .btn-primary {
@@ -129,8 +160,12 @@
   margin: 48px 0px 16px;
 }
 
-.input-animation-label {
+.o-16-ease-in-out {
   transition: all 0.16s ease-in-out;
+}
+
+.input-animation-label {
+  transition: opacity 0.16s ease-in-out;
 }
 
 .input:focus ~ .input-label,
