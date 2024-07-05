@@ -8,6 +8,10 @@ export default {
       },
       colors: {
         'primary-gray': '#f6f6fb',
+        'secondary-gray': '#8e8e93',
+        'primary-link': '#0391ff',
+        'primary-disabled': '#ececee',
+        'primary-disabled-text': '#aeaeb5',
       },
       width: {
         inherit: 'inherit',
@@ -23,6 +27,7 @@ export default {
       },
       boxShadow: {
         headerSelect: '0 5px 25px rgba(14, 14, 14, .1)',
+        modalBtn: '0 -1px 12px rgba(0,0,0,.08)',
       },
     },
   },

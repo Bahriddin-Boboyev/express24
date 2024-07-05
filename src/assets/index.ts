@@ -6,6 +6,7 @@ import DropdownChevron from './images/chevron.svg?react';
 import HeaderLang from './images/lang.svg?react';
 import HeaderUser from './images/user.svg?react';
 import CheckMark from './images/check-mark.svg?react';
+import ModalClose from './images/modal-close.svg?react';
 
 // EXPORT ICONS
 export const Icon = {
@@ -17,4 +18,5 @@ export const Icon = {
   HeaderLang,
   HeaderUser,
   CheckMark,
+  ModalClose,
 };

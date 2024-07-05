@@ -1,13 +1,14 @@
 import { Icon } from '@/assets';
-import { Button, Dropdown, Input } from '@/components';
+import { Button, Dropdown, Input, Portal } from '@/components';
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { appStore } from '@/store';
 
 export const Navbar = () => {
   const [isLangShow, setIsLangShow] = useState(false);
-  const { setIsOverlay, isOverlay } = appStore();
+  const { setIsOverlay } = appStore();
   const selectRef = useRef<HTMLDivElement>(null);
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
 
   useEffect(() => {
     document.addEventListener('click', (e) => handleClickOutside(e));
@@ -22,21 +23,34 @@ export const Navbar = () => {
     setIsLangShow(!isLangShow);
   };
 
-  // console.log(isOverlay);
+  const handleChange = (val: string) => {
+    console.log(val);
+
+    if (val.length) {
+      setIsBtnDisabled(false);
+    } else {
+      setIsBtnDisabled(true);
+    }
+  };
 
   const handleClickOutside = (event: MouseEvent) => {
     if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
-      console.log(selectRef.current.contains(event.target as Node));
       setIsLangShow(false);
     }
   };
 
-  const handleProfile = () => {
+  const handleProfile = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    e.stopPropagation();
     setIsOverlay(true);
   };
 
+  const handleClose = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.stopPropagation();
+    setIsOverlay(false);
+  };
+
   return (
-    <header className="w-full fixed top-0 z-10 h-20 gap-[60px] bg-white border-b border-primary-gray flex items-center">
+    <header className="w-full fixed top-0 z-[2] h-20 gap-[60px] bg-white border-b border-primary-gray flex items-center">
       <div className="w-48 pl-7">
         <Link to={'/'} className="cursor-pointer">
           <Icon.Logo />
@@ -44,7 +58,14 @@ export const Navbar = () => {
       </div>
       <div className="flex items-center gap-2 flex-1">
         <div className="w-[357px]">
-          <Input text="test" type="text" placeholder="Muassasa, taom, tovar va oshxona" beforeIcon={Icon.Search} />
+          <Input
+            text="test"
+            type="text"
+            placeholder="Muassasa, taom, tovar va oshxona"
+            beforeIcon={Icon.Search}
+            isPhoneInput={false}
+            handleChange={(val) => {}}
+          />
         </div>
         <Button text="Topish" variant="primary" />
         <div className="max-w-[280px] ml-4">
@@ -96,6 +117,46 @@ export const Navbar = () => {
             <Icon.HeaderUser />
           </div>
           <p>Profile</p>
+
+          <Portal>
+            <div className="absolute right-0 p-16-16-0 z-[2]">
+              <button
+                onClick={handleClose}
+                className="shadow-modalBtn p-2 rounded-[50%] bg-white text-[14px] border-none text-[#131314] cursor-pointer overflow-hidden w-[fit-content] tracking-tighter ease-in-out-016"
+              >
+                <Icon.ModalClose />
+              </button>
+            </div>
+            <div className="p-6">
+              <form>
+                <div className="mb-10">
+                  <h3 className="font-semibold text-2xl">Telefon raqamingizni kiriting</h3>
+                  <p className="text-sm text-secondary-gray mt-1">va tasdiq kodini oling</p>
+                </div>
+                <Input
+                  text=""
+                  type="text"
+                  style="p-22-40-6-12"
+                  label="Telifon raqami"
+                  placeholder=" "
+                  handleChange={handleChange}
+                  isPhoneInput={true}
+                />
+                <div className="text-xs text-secondary-gray flex flex-col text-center m-48-0-16">
+                  Kodni olish tugmasini bosish orqali siz shartlarga rozilik bildirasiz{' '}
+                  <a className="text-primary-link" href="#">
+                    foydalanuvchi shartnomasi
+                  </a>
+                </div>
+                <Button
+                  text="Kod olish"
+                  variant="primary"
+                  style="w-full disabled:bg-primary-disabled disabled:text-primary-disabled-text"
+                  disabled={isBtnDisabled}
+                />
+              </form>
+            </div>
+          </Portal>
         </div>
       </div>
     </header>
