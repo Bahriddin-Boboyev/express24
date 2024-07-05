@@ -9,6 +9,10 @@
     pointer-events: auto;
   }
 
+  .transformY-50 {
+    transform: translateY(-50%);
+  }
+
   .dropdown-anime {
     transition: all 0.12s ease-in-out;
   }
@@ -58,7 +62,7 @@
   }
   .carousel-scroll {
     flex: 0 0 auto;
-    width: calc(17% - 11.6px);
+    width: var(--slide-width);
     scroll-snap-align: end;
     scroll-snap-stop: always;
     transition: transform 0.5s ease-in-out;
@@ -69,7 +73,7 @@
   }
 
   .carousel-scroll:not(:first-child) {
-    margin-left: 11.6px;
+    margin-left: var(--slide-space);
   }
 
   main {
@@ -92,6 +96,10 @@
 .btn-primary {
   background-color: #ffec00;
   transition: background 0.16s ease-in-out, color 0.16s ease-in-out;
+}
+
+.ease-in-bg16 {
+  transition: background-color 0.16s ease-in-out;
 }
 
 .btn-primary:hover {
