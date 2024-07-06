@@ -1,6 +1,7 @@
 import { Icon } from '@/assets';
-import { Select } from '@/components';
+import { MainCard, Select } from '@/components';
 import { MainCarousel } from '@/components/carousel';
+import { cardProduct1 } from '@/constants';
 import { carouselData1, carouselData2, categories } from '@/mock';
 import { Link } from 'react-router-dom';
 
@@ -43,10 +44,11 @@ export const Main = () => {
               afterIcon={<Icon.DropdownChevron width={16} height={16} />}
               btnStyle="flex items-center gap-3 text-base mx-1 bg-primary-gray px-4 py-[14px] cursor-pointer hover:bg-[#ececf1] rounded-xl ease-in-bg16"
             />
-            {/* <div className="text-base mx-1 bg-primary-gray px-4 py-[14px] cursor-pointer hover:bg-[#ececf1] rounded-xl ease-in-bg16">
-              {categories.slice(8, -1)[0]}
-            </div> */}
           </div>
+
+          <section className="mt-5">
+            <MainCard items={[...cardProduct1, ...cardProduct1]} />
+          </section>
         </section>
       </div>
     </main>

@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 @layer base {
   .icon {
     fill: #aeaeb2;
@@ -89,6 +93,10 @@
   cursor: pointer;
 }
 
+.transform-y--50 {
+  transform: translateY(-50%);
+}
+
 .carousel-scroll.active {
   transform: translateX(calc(-25% * var(--index)));
 }
@@ -120,6 +128,27 @@
 
 .ease-in-out-016 {
   transition: background 0.16s ease-in-out, color 0.16s ease-in-out;
+}
+
+.webkit-box {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.main-card-item {
+  width: calc(100% / 12 * 4.12 - var(--vertical-gap));
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: var(--card-radius);
+}
+
+.main-card-favorite-shadow {
+  box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.08);
+}
+
+.main-card-brand-shadow {
+  box-shadow: 0 0 25px rgba(14, 14, 14, 0.1);
 }
 
 /* PORTAL */
