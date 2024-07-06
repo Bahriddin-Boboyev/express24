@@ -38,7 +38,7 @@ export const Select = ({ ...props }: Props) => {
         {props?.afterIcon && props.afterIcon}
       </button>
       <ul
-        className={`dropdown-content absolute min-w-[288px] max-h-[350px] w-fit rounded-xl bg-white overflow-scroll shadow-headerSelect ease-in-opacity right-0 ${
+        className={`dropdown-content absolute z-[2] min-w-[288px] max-h-[350px] w-fit rounded-xl bg-white overflow-scroll shadow-headerSelect ease-in-opacity right-0 ${
           selectIsOpen ? '' : 'hidden'
         }`}
       >

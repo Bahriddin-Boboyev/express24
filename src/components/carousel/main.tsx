@@ -80,7 +80,7 @@ export const MainCarousel = ({ ...props }: Props) => {
           })}
         </div>
         <div
-          className="absolute w-9 h-9 mx-auto z-[2] opacity-100 top-[50%] transformY-50 rounded-[50%] cursor-pointer pointer-events-auto bg-white left-[-18px] hover:text-secondary-gray o-16-ease-in-out"
+          className="absolute w-9 h-9 mx-auto z-[2] opacity-100 top-[50%] transformY-50 rounded-[50%] cursor-pointer pointer-events-auto bg-white left-[-18px] hover:text-secondary-gray o-16-ease-in-out prev-next-btn-shadow"
           onClick={handlePrevClick}
         >
           <span className="h-[inherit] flex items-center justify-center">
@@ -88,7 +88,7 @@ export const MainCarousel = ({ ...props }: Props) => {
           </span>
         </div>
         <div
-          className="absolute w-9 h-9 mx-auto z-[2] opacity-100 top-[50%] transformY-50 rounded-[50%] cursor-pointer pointer-events-auto bg-white right-[-18px] hover:text-secondary-gray o-16-ease-in-out"
+          className="absolute w-9 h-9 mx-auto z-[2] opacity-100 top-[50%] transformY-50 rounded-[50%] cursor-pointer pointer-events-auto bg-white right-[-18px] hover:text-secondary-gray o-16-ease-in-out prev-next-btn-shadow"
           onClick={handleNextClick}
         >
           <span className="h-[inherit] flex items-center justify-center">

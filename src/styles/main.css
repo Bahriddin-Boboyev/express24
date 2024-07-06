@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 @layer base {
   .icon {
     fill: #aeaeb2;
@@ -149,6 +145,10 @@
 
 .main-card-brand-shadow {
   box-shadow: 0 0 25px rgba(14, 14, 14, 0.1);
+}
+
+.prev-next-btn-shadow {
+  box-shadow: 0 0 15px rgba(65, 65, 65, 0.1);
 }
 
 /* PORTAL */
