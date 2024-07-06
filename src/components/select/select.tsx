@@ -25,6 +25,12 @@ export const Select = ({ ...props }: Props) => {
     };
   }, []);
 
+  const handleClose = (e: React.MouseEvent<HTMLLIElement, MouseEvent>, item: string) => {
+    e.stopPropagation();
+    console.log(item);
+    setSelectIsOpen(false);
+  };
+
   return (
     <div className="Select relative" ref={selectRef}>
       <button className={props.btnStyle} onClick={() => setSelectIsOpen(!selectIsOpen)}>
@@ -39,6 +45,7 @@ export const Select = ({ ...props }: Props) => {
         {props.dropdownItems.map((item) => (
           <li
             className={`select-border-b flex p-4 whitespace-nowrap justify-between gap-[10px] cursor-pointer hover:bg-[#ececf1] ease-in-bg1 `}
+            onClick={(e) => handleClose(e, item)}
           >
             {item}
           </li>
