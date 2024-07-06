@@ -98,8 +98,20 @@
   transition: background 0.16s ease-in-out, color 0.16s ease-in-out;
 }
 
+.ease-in-bg1 {
+  transition: background-color 0.1s ease-in-out;
+}
+
 .ease-in-bg16 {
   transition: background-color 0.16s ease-in-out;
+}
+
+.ease-in-opacity {
+  transition: opacity 0.16s ease-in-out, transform 0.1s ease-in;
+}
+
+.select-border-b {
+  border-bottom: 0.5px solid #f6f6fb;
 }
 
 .btn-primary:hover {
