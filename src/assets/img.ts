@@ -28,6 +28,16 @@ import categoryDodoPizzaImg from './images/category-dodo-pizza.jpg';
 import categoryKfcImg from './images/category-kfc.jpg';
 import categoryNewFermerImg from './images/category-new-fermer.jpg';
 import categoryPizzaBbqImg from './images/category-pizza&bbq.jpg';
+import drinkProductImg1 from './images/drink-product-1.jpg';
+import drinkProductImg2 from './images/drink-product-2.jpg';
+import drinkProductImg3 from './images/drink-product-3.jpg';
+import drinkProductImg4 from './images/drink-product-4.jpg';
+import drinkProductImg5 from './images/drink-product-5.jpg';
+import drinkProductImg6 from './images/drink-product-6.jpg';
+import drinkProductImg7 from './images/drink-product-7.jpg';
+import drinkProductImg8 from './images/drink-product-8.jpg';
+import drinkProductImg9 from './images/drink-product-9.jpg';
+import drinkProductImg10 from './images/drink-product-10.jpg';
 
 // EXPORT IMAGES
 export const Image = {
@@ -61,4 +71,14 @@ export const Image = {
   categoryKfcImg,
   categoryNewFermerImg,
   categoryPizzaBbqImg,
+  drinkProductImg1,
+  drinkProductImg2,
+  drinkProductImg3,
+  drinkProductImg4,
+  drinkProductImg5,
+  drinkProductImg6,
+  drinkProductImg7,
+  drinkProductImg8,
+  drinkProductImg9,
+  drinkProductImg10,
 };

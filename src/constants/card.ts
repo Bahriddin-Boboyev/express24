@@ -50,3 +50,66 @@ export const cardProduct1 = [
     rating: 4.7,
   },
 ];
+
+export const cardProduct2 = [
+  {
+    id: 1,
+    name: 'Лесные ягоды 0.5 л',
+    price: '40,000',
+    image: Image.drinkProductImg1,
+  },
+  {
+    id: 2,
+    name: 'Айс Мокка L',
+    price: '40,000',
+    image: Image.drinkProductImg2,
+  },
+  {
+    id: 3,
+    name: 'Айс Американо',
+    price: '20,000',
+    image: Image.drinkProductImg3,
+  },
+  {
+    id: 4,
+    name: 'Манго-Эстрагон',
+    price: '27,000',
+    image: Image.drinkProductImg4,
+  },
+  {
+    id: 5,
+    name: 'Карамельный Фраппе L',
+    price: '65,000',
+    image: Image.drinkProductImg5,
+  },
+  {
+    id: 6,
+    name: 'Тархун-киви 0.5 л',
+    price: '40,000',
+    image: Image.drinkProductImg6,
+  },
+  {
+    id: 7,
+    name: 'Айс Капучино L',
+    price: '35,000',
+    image: Image.drinkProductImg7,
+  },
+  {
+    id: 8,
+    name: 'Классический лимонад L',
+    price: '35,000',
+    image: Image.drinkProductImg8,
+  },
+  {
+    id: 9,
+    name: 'Айс Латте L',
+    price: '35,000',
+    image: Image.drinkProductImg9,
+  },
+  {
+    id: 10,
+    name: 'Бамбл апельсин',
+    price: '25,000',
+    image: Image.drinkProductImg10,
+  },
+];

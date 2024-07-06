@@ -1,7 +1,7 @@
 import { Icon } from '@/assets';
-import { MainCard, Select } from '@/components';
+import { Button, MainCard, Select } from '@/components';
 import { MainCarousel } from '@/components/carousel';
-import { cardProduct1 } from '@/constants';
+import { cardProduct1, cardProduct2 } from '@/constants';
 import { carouselData1, carouselData2, categories } from '@/mock';
 import { Link } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ export const Main = () => {
     <main className="container mx-auto mb-96">
       <div className="flex flex-wrap gap-y-14">
         <section className="header-carousel">
-          <MainCarousel items={carouselData1} isBottom={false} />
+          <MainCarousel items={carouselData1} type="normal" isExistBtn={true} />
         </section>
 
         <section className="prod-shop-carousel">
@@ -21,7 +21,7 @@ export const Main = () => {
               <Icon.NextIcon width={16} height={16} color="black" />
             </div>
           </div>
-          <MainCarousel items={carouselData2} isBottom={true} />
+          <MainCarousel items={carouselData2} type="bottom" isExistBtn={true} />
         </section>
 
         <section className="restaurants w-full">
@@ -50,6 +50,17 @@ export const Main = () => {
             <MainCard items={[...cardProduct1, ...cardProduct1]} />
           </section>
         </section>
+
+        <section className="drinks w-full">
+          <h4 className="text-[22px] font-bold text-[#1a1a18] mb-3">Освежающие напитки</h4>
+          <MainCarousel type="drink-card" items={cardProduct2} isExistBtn={false} />
+        </section>
+
+        <section>
+          <MainCard items={[...cardProduct1, ...cardProduct1]} />
+        </section>
+
+        <Button text="Yana ko‘proq ko‘rsatish" variant="primary" style="w-full bg-[#ececee] hover:bg-[#e0e0e4]" />
       </div>
     </main>
   );
