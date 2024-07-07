@@ -15,7 +15,9 @@ export const Main = () => {
 
         <section className="prod-shop-carousel">
           <div className="flex flex-wrap items-center justify-between mb-6">
-            <h3 className="text-[34px] font-extrabold text-[#1a1a18]">Do‘konlar</h3>
+            <h3 className="text-[34px] font-extrabold text-[#1a1a18]">
+              Do‘konlar
+            </h3>
             <div className="flex items-center text-secondary-gray">
               <Link to="#">Hammasini ko‘rsatish</Link>
               <Icon.NextIcon width={16} height={16} color="black" />

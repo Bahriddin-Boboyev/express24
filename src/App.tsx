@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { About, Main } from '@/pages';
-import { Navbar } from '@/components';
+import { Footer, Navbar } from '@/components';
 
 export const App = () => {
   return (
@@ -12,6 +12,7 @@ export const App = () => {
           <Route path="/about" element={<About />} />
         </Routes>
       </div>
+      <Footer />
       {/* <div className={`overlay ${isOverlay ? 'active' : ''}`} /> */}
     </>
   );

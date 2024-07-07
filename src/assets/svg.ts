@@ -11,6 +11,9 @@ import NextIcon from './svgs/next.svg?react';
 import PreviousIcon from './svgs/previous.svg?react';
 import FavoriteIcon from './svgs/favorite.svg?react';
 import StartIcon from './svgs/star.svg?react';
+import Instagram from './svgs/instagram.svg?react';
+import Facebook from './svgs/facebook.svg?react';
+import Telegram from './svgs/telegram.svg?react';
 
 // EXPORT ICONS
 export const Icon = {
@@ -27,4 +30,7 @@ export const Icon = {
   PreviousIcon,
   FavoriteIcon,
   StartIcon,
+  Instagram,
+  Facebook,
+  Telegram,
 };
