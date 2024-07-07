@@ -12,6 +12,7 @@ export const MainCard = ({ ...props }: Props) => {
       <ul className="flex flex-wrap gap-9">
         {props.items.map((item) => (
           <li
+            key={Math.floor(Math.random() * 10000 + item.id)}
             className="main-card-item overflow-hidden relative"
             style={{ '--vertical-gap': '36px', '--card-radius': '16px', '--information-block-padding': '12px' }}
           >

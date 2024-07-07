@@ -57,6 +57,7 @@ export const Input = ({ ...props }: Props) => {
     }
 
     props.handleChange(e.target.value);
+    setInputVal(e.target.value);
   };
 
   const handleInputDown = (e: React.KeyboardEvent<HTMLInputElement>) => {

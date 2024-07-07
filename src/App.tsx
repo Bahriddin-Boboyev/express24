@@ -13,7 +13,6 @@ export const App = () => {
         </Routes>
       </div>
       <Footer />
-      {/* <div className={`overlay ${isOverlay ? 'active' : ''}`} /> */}
     </>
   );
 };

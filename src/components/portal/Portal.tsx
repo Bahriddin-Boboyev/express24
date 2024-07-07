@@ -9,7 +9,6 @@ type Props = {
 
 export const Portal = ({ children }: Props) => {
   const { isOverlay } = appStore();
-  // console.log('portal', store.isOverlay);
 
   return createPortal(
     isOverlay && (

@@ -15,7 +15,7 @@ export const Navbar = () => {
     return () => {
       document.removeEventListener('click', (e) => handleClickOutside(e));
     };
-  }, []);
+  }, [isLangShow]);
 
   const handleLangShow = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     event.stopPropagation();
@@ -34,7 +34,7 @@ export const Navbar = () => {
   };
 
   const handleClickOutside = (event: MouseEvent) => {
-    if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
+    if (isLangShow && selectRef.current && !selectRef.current.contains(event.target as Node)) {
       setIsLangShow(false);
     }
   };
@@ -50,7 +50,10 @@ export const Navbar = () => {
   };
 
   return (
-    <header className="w-full fixed top-0 z-[2] h-20 gap-[60px] bg-white border-b border-primary-gray flex items-center">
+    <header
+      id="header"
+      className="w-full fixed top-0 z-[3] h-20 gap-[60px] bg-white border-b border-primary-gray flex items-center"
+    >
       <div className="w-48 pl-7">
         <Link to={'/'} className="cursor-pointer">
           <Icon.Logo />

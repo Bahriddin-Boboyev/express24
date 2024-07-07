@@ -7,13 +7,13 @@ export const Footer = () => {
         <div className="flex flex-wrap gap-x-0 gap-y-12 mr-0">
           <ul className="flex text-sm text-secondary-gray flex-wrap gap-x-8 gap-y-0 -mr-8 w-full">
             <li>
-              <a href="#">Biz haqimizda</a>
+              <a href="#up">Biz haqimizda</a>
             </li>
             <li>
-              <a href="#">Aloqa uchun</a>
+              <a href="#up">Aloqa uchun</a>
             </li>
             <li>
-              <a href="#">Foydalanuvchi shartnomasi</a>
+              <a href="#up">Foydalanuvchi shartnomasi</a>
             </li>
           </ul>
           <ul className="flex items-center justify-between w-full text-base text-secondary-gray">
@@ -21,17 +21,17 @@ export const Footer = () => {
             <li>
               <ul className="flex items-center gap-x-[10px]">
                 <li>
-                  <a href="#">
+                  <a href="#up">
                     <Icon.Instagram width={18} height={18} />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="#up">
                     <Icon.Facebook width={18} height={18} />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="#up">
                     <Icon.Telegram width={18} height={18} />
                   </a>
                 </li>

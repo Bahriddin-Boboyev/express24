@@ -9,15 +9,18 @@ type Props = {
 
 export const MainCarousel = ({ ...props }: Props) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isClickBnt, setIsClickBnt] = useState(false);
 
   const ITEM_COUNT = props.items.length;
 
   const handleNextClick = () => {
     setActiveIndex((prevIndex) => (prevIndex + 3) % ITEM_COUNT);
+    setIsClickBnt(true);
   };
 
   const handlePrevClick = () => {
     setActiveIndex((prevIndex) => (prevIndex - 3 + ITEM_COUNT) % ITEM_COUNT);
+    setIsClickBnt(true);
   };
 
   return (
@@ -37,8 +40,9 @@ export const MainCarousel = ({ ...props }: Props) => {
                   key={item.id}
                   className={`carousel-scroll pb-1 ${index === activeIndex ? 'active' : ''}`}
                   ref={(ref) => {
-                    if (ref && index === activeIndex) {
+                    if (isClickBnt && ref && index === activeIndex) {
                       ref.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                      setIsClickBnt(false);
                     }
                   }}
                 >
@@ -87,8 +91,9 @@ export const MainCarousel = ({ ...props }: Props) => {
                 key={index + 1}
                 className={`carousel-scroll pb-1 ${index === activeIndex ? 'active' : ''}`}
                 ref={(ref) => {
-                  if (ref && index === activeIndex) {
+                  if (isClickBnt && ref && index === activeIndex) {
                     ref.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                    setIsClickBnt(false);
                   }
                 }}
               >

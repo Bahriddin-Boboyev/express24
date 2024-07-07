@@ -13,7 +13,7 @@ export const Select = ({ ...props }: Props) => {
   const selectRef = useRef<HTMLDivElement>(null);
 
   const handleClickOutside = (event: MouseEvent) => {
-    if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
+    if (selectIsOpen && selectRef.current && !selectRef.current.contains(event.target as Node)) {
       setSelectIsOpen(false);
     }
   };
@@ -23,7 +23,7 @@ export const Select = ({ ...props }: Props) => {
     return () => {
       document.removeEventListener('click', (e) => handleClickOutside(e));
     };
-  }, []);
+  }, [selectIsOpen]);
 
   const handleClose = (e: React.MouseEvent<HTMLLIElement, MouseEvent>, item: string) => {
     e.stopPropagation();
@@ -31,9 +31,13 @@ export const Select = ({ ...props }: Props) => {
     setSelectIsOpen(false);
   };
 
+  const handleClick = () => {
+    setSelectIsOpen(!selectIsOpen);
+  };
+
   return (
     <div className="Select relative" ref={selectRef}>
-      <button className={props.btnStyle} onClick={() => setSelectIsOpen(!selectIsOpen)}>
+      <button className={props.btnStyle} onClick={handleClick}>
         <span>{props.btnText}</span>
         {props?.afterIcon && props.afterIcon}
       </button>
@@ -42,8 +46,9 @@ export const Select = ({ ...props }: Props) => {
           selectIsOpen ? '' : 'hidden'
         }`}
       >
-        {props.dropdownItems.map((item) => (
+        {props.dropdownItems.map((item, index) => (
           <li
+            key={index}
             className={`select-border-b flex p-4 whitespace-nowrap justify-between gap-[10px] cursor-pointer hover:bg-[#ececf1] ease-in-bg1 `}
             onClick={(e) => handleClose(e, item)}
           >
