@@ -67,7 +67,7 @@ export const Navbar = () => {
             placeholder="Muassasa, taom, tovar va oshxona"
             beforeIcon={Icon.Search}
             isPhoneInput={false}
-            handleChange={(val) => {}}
+            handleChange={() => {}}
           />
         </div>
         <Button text="Topish" variant="primary" />

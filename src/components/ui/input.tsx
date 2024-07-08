@@ -27,7 +27,7 @@ export const Input = ({ ...props }: Props) => {
     const { length } = value;
 
     const sliceVal = value.trim().slice(-1);
-    const regex = (value: string, rgx: RegExp, spliceVal: string) => value.replace(rgx, spliceVal);
+    // const regex = (value: string, rgx: RegExp, spliceVal: string) => value.replace(rgx, spliceVal);
     if (sliceVal.match(regexPhone)?.length || length === 18) {
       setInputVal(inputVal);
       return;
